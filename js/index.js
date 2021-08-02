@@ -42,7 +42,19 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navEls = document.querySelectorAll("a");
-navEls.forEach((item, i) => item.textContent = Object.values(siteContent.nav)[i])
+navEls.forEach((item, i) => {
+  item.textContent = Object.values(siteContent.nav)[i]
+  item.style.color = "green";
+})
+
+const firstEl = document.createElement("p");
+firstEl.textContent = "Example 1";
+const nav = document.querySelector("nav");
+nav.appendChild(firstEl);
+const secEl = document.createElement("p");
+secEl.textContent = "Example 2";
+nav.prepend(secEl);
+nav.style.color = "green";
 
 document.querySelector("h1").innerHTML = "DOM <br> Is <br> Awesome";
 document.querySelector("button").innerHTML = siteContent["cta"]["button"];
@@ -61,7 +73,7 @@ h4[3].textContent = siteContent["main-content"]["product-h4"]
 h4[4].textContent = siteContent["main-content"]["vision-h4"]
 h4[5].textContent = siteContent["contact"]["contact-h4"]
 
-const p = document.querySelectorAll('p');
+const p = document.querySelectorAll('.top-content p');
 p[0].textContent = siteContent["main-content"]["features-content"]
 p[1].textContent = siteContent["main-content"]["about-content"]
 p[2].textContent = siteContent["main-content"]["services-content"]
