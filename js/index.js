@@ -47,12 +47,12 @@ navEls.forEach((item, i) => {
   item.style.color = "green";
 })
 
-const firstEl = document.createElement("p");
-firstEl.textContent = "Example 1";
+const firstEl = document.createElement("article");
+firstEl.textContent = "Now";
 const nav = document.querySelector("nav");
 nav.appendChild(firstEl);
-const secEl = document.createElement("p");
-secEl.textContent = "Example 2";
+const secEl = document.createElement("article");
+secEl.textContent = "Green";
 nav.prepend(secEl);
 nav.style.color = "green";
 
@@ -73,7 +73,7 @@ h4[3].textContent = siteContent["main-content"]["product-h4"]
 h4[4].textContent = siteContent["main-content"]["vision-h4"]
 h4[5].textContent = siteContent["contact"]["contact-h4"]
 
-const p = document.querySelectorAll('.top-content p');
+const p = document.querySelectorAll('p');
 p[0].textContent = siteContent["main-content"]["features-content"]
 p[1].textContent = siteContent["main-content"]["about-content"]
 p[2].textContent = siteContent["main-content"]["services-content"]
